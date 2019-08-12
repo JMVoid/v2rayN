@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.muxNumLabel = new System.Windows.Forms.Label();
             this.chksniffingEnabled2 = new System.Windows.Forms.CheckBox();
             this.chksniffingEnabled = new System.Windows.Forms.CheckBox();
             this.txtremoteDNS = new System.Windows.Forms.TextBox();
@@ -89,6 +90,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.muxNumBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -131,6 +133,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.muxNumBox);
+            this.groupBox1.Controls.Add(this.muxNumLabel);
             this.groupBox1.Controls.Add(this.chksniffingEnabled2);
             this.groupBox1.Controls.Add(this.chksniffingEnabled);
             this.groupBox1.Controls.Add(this.txtremoteDNS);
@@ -152,6 +156,11 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // muxNumLabel
+            // 
+            resources.ApplyResources(this.muxNumLabel, "muxNumLabel");
+            this.muxNumLabel.Name = "muxNumLabel";
             // 
             // chksniffingEnabled2
             // 
@@ -522,6 +531,11 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // muxNumBox
+            // 
+            resources.ApplyResources(this.muxNumBox, "muxNumBox");
+            this.muxNumBox.Name = "muxNumBox";
+            // 
             // OptionSettingForm
             // 
             resources.ApplyResources(this, "$this");
@@ -619,5 +633,7 @@
         private System.Windows.Forms.CheckBox chksniffingEnabled;
         private System.Windows.Forms.CheckBox chksniffingEnabled2;
         private System.Windows.Forms.Button btnSetDefRountingRule;
+        private System.Windows.Forms.Label muxNumLabel;
+        private System.Windows.Forms.TextBox muxNumBox;
     }
 }

@@ -39,6 +39,9 @@ namespace v2rayN.Mode
         /// 允许Mux多路复用
         /// </summary>
         public bool muxEnabled { get; set; }
+        // The number of Mux
+        public int muxNumber { get; set; }
+
 
         /// <summary>
         /// 域名解析策略

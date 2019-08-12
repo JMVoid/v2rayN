@@ -36,6 +36,7 @@ namespace v2rayN.Forms
 
             //Mux
             chkmuxEnabled.Checked = config.muxEnabled;
+            muxNumBox.Text = config.muxNumber.ToString();
 
             //本地监听
             if (config.inbound.Count > 0)
@@ -152,7 +153,13 @@ namespace v2rayN.Forms
 
             //Mux
             bool muxEnabled = chkmuxEnabled.Checked;
+            string muxNumber = muxNumBox.Text;
 
+            if (Utils.IsNullOrEmpty(muxNumber)) {
+                muxNumber = "8";
+            }
+
+            config.muxNumber = Utils.ToInt(muxNumber);
             //本地监听
             string localPort = txtlocalPort.Text.Trim();
             string protocol = cmbprotocol.Text.Trim();

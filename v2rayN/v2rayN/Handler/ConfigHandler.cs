@@ -37,7 +37,7 @@ namespace v2rayN.Handler
 
                 //Mux
                 config.muxEnabled = true;
-
+                config.muxNumber = 8;
                 ////默认监听端口
                 //config.pacPort = 8888;
             }
