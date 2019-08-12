@@ -160,6 +160,17 @@ namespace v2rayN.Handler
                 //开启udp
                 inbound.settings.udp = config.inbound[0].udpEnabled;
                 inbound.sniffing.enabled = config.inbound[0].sniffingEnabled;
+                // set http inbound 
+                var inboundHttp = v2rayConfig.inbounds[1];
+                inboundHttp.port = config.inbound[1].localPort;
+                inboundHttp.protocol = config.inbound[1].protocol;
+                if (config.allowLANConn)
+                {
+                    inboundHttp.listen = "0.0.0.0";
+                } 
+                else {
+                    inboundHttp.listen = "127.0.0.1";
+                }
             }
             catch
             {

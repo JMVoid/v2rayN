@@ -49,15 +49,15 @@ namespace v2rayN.Forms
                 {
                     txtlocalPort2.Text = config.inbound[1].localPort.ToString();
                     cmbprotocol2.Text = config.inbound[1].protocol.ToString();
-                    chkudpEnabled2.Checked = config.inbound[1].udpEnabled;
+                    //chkudpEnabled2.Checked = config.inbound[1].udpEnabled;
                     chksniffingEnabled2.Checked = config.inbound[1].sniffingEnabled;
-                    chkAllowIn2.Checked = true;
+                    //chkAllowIn2.Checked = true;
                 }
-                else
-                {
-                    chkAllowIn2.Checked = false;
-                }
-                chkAllowIn2State();
+                //else
+                //{
+                //    chkAllowIn2.Checked = false;
+                //}S
+                //chkAllowIn2State();
             }
 
             //remoteDNS
@@ -183,36 +183,36 @@ namespace v2rayN.Forms
             //本地监听2
             string localPort2 = txtlocalPort2.Text.Trim();
             string protocol2 = cmbprotocol2.Text.Trim();
-            bool udpEnabled2 = chkudpEnabled2.Checked;
+            //bool udpEnabled2 = chkudpEnabled2.Checked;
             bool sniffingEnabled2 = chksniffingEnabled2.Checked;
-            if (chkAllowIn2.Checked)
-            {
+            //if (chkAllowIn2.Checked)
+            //{
                 if (Utils.IsNullOrEmpty(localPort2) || !Utils.IsNumberic(localPort2))
                 {
                     UI.Show(UIRes.I18N("FillLocalListeningPort"));
                     return -1;
                 }
-                if (Utils.IsNullOrEmpty(protocol2))
-                {
-                    UI.Show(UIRes.I18N("PleaseSelectProtocol"));
-                    return -1;
-                }
-                if (config.inbound.Count < 2)
-                {
-                    config.inbound.Add(new Mode.InItem());
-                }
-                config.inbound[1].localPort = Utils.ToInt(localPort2);
-                config.inbound[1].protocol = protocol2;
-                config.inbound[1].udpEnabled = udpEnabled2;
-                config.inbound[1].sniffingEnabled = sniffingEnabled2;
-            }
-            else
-            {
-                if (config.inbound.Count > 1)
-                {
-                    config.inbound.RemoveAt(1);
-                }
-            }
+            //    if (Utils.IsNullOrEmpty(protocol2))
+            //    {
+            //        UI.Show(UIRes.I18N("PleaseSelectProtocol"));
+            //        return -1;
+            //    }
+            //    if (config.inbound.Count < 2)
+            //    {
+            //        config.inbound.Add(new Mode.InItem());
+            //    }
+            //    config.inbound[1].localPort = Utils.ToInt(localPort2);
+            //    config.inbound[1].protocol = protocol2;
+            //    config.inbound[1].udpEnabled = udpEnabled2;
+            //    config.inbound[1].sniffingEnabled = sniffingEnabled2;
+            //}
+            //else
+            //{
+            //    if (config.inbound.Count > 1)
+            //    {
+            //        config.inbound.RemoveAt(1);
+            //    }
+            //}
 
             //日志     
             config.logEnabled = logEnabled;
@@ -308,17 +308,17 @@ namespace v2rayN.Forms
             this.DialogResult = DialogResult.Cancel;
         }
 
-        private void chkAllowIn2_CheckedChanged(object sender, EventArgs e)
-        {
-            chkAllowIn2State();
-        }
-        private void chkAllowIn2State()
-        {
-            bool blAllow2 = chkAllowIn2.Checked;
-            txtlocalPort2.Enabled =
-            cmbprotocol2.Enabled =
-            chkudpEnabled2.Enabled = blAllow2;
-        }
+        //private void chkAllowIn2_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    chkAllowIn2State();
+        //}
+        //private void chkAllowIn2State()
+        //{
+        //    bool blAllow2 = chkAllowIn2.Checked;
+        //    txtlocalPort2.Enabled =
+        //    cmbprotocol2.Enabled =
+        //    chkudpEnabled2.Enabled = blAllow2;
+        //}
 
         private void btnSetDefRountingRule_Click(object sender, EventArgs e)
         {

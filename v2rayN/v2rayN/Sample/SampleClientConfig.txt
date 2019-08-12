@@ -4,22 +4,40 @@
 		"error": "Verror.log",
 		"loglevel": "warning"
 	},
-	"inbounds": [{
-		"port": 10808,
-		"protocol": "socks",
-		"listen": "127.0.0.1",
-		"settings": {
-			"auth": "noauth",
-			"udp": true
-		},
-		"sniffing": {
-			"enabled": true,
-			"destOverride": [
-				"http",
-				"tls"
-			]
-		}
-	}],
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "listen": "127.0.0.1",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "listen": "127.0.0.1",
+      "settings": {
+        "auth": "noauth",
+        "udp": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
 	"outbounds": [{
 			"tag": "proxy",
 			"protocol": "vmess",

@@ -33,19 +33,18 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.muxNumBox = new System.Windows.Forms.TextBox();
             this.muxNumLabel = new System.Windows.Forms.Label();
             this.chksniffingEnabled2 = new System.Windows.Forms.CheckBox();
             this.chksniffingEnabled = new System.Windows.Forms.CheckBox();
             this.txtremoteDNS = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.chkmuxEnabled = new System.Windows.Forms.CheckBox();
-            this.chkAllowIn2 = new System.Windows.Forms.CheckBox();
             this.chkudpEnabled2 = new System.Windows.Forms.CheckBox();
             this.cmbprotocol2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtlocalPort2 = new System.Windows.Forms.TextBox();
-            this.cmbprotocol = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.chkudpEnabled = new System.Windows.Forms.CheckBox();
             this.chklogEnabled = new System.Windows.Forms.CheckBox();
             this.cmbloglevel = new System.Windows.Forms.ComboBox();
@@ -90,7 +89,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.muxNumBox = new System.Windows.Forms.TextBox();
+            this.cmbprotocol = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -133,6 +133,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.muxNumBox);
             this.groupBox1.Controls.Add(this.muxNumLabel);
             this.groupBox1.Controls.Add(this.chksniffingEnabled2);
@@ -140,7 +141,6 @@
             this.groupBox1.Controls.Add(this.txtremoteDNS);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.chkmuxEnabled);
-            this.groupBox1.Controls.Add(this.chkAllowIn2);
             this.groupBox1.Controls.Add(this.chkudpEnabled2);
             this.groupBox1.Controls.Add(this.cmbprotocol2);
             this.groupBox1.Controls.Add(this.label3);
@@ -156,6 +156,16 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // muxNumBox
+            // 
+            resources.ApplyResources(this.muxNumBox, "muxNumBox");
+            this.muxNumBox.Name = "muxNumBox";
             // 
             // muxNumLabel
             // 
@@ -190,13 +200,6 @@
             this.chkmuxEnabled.Name = "chkmuxEnabled";
             this.chkmuxEnabled.UseVisualStyleBackColor = true;
             // 
-            // chkAllowIn2
-            // 
-            resources.ApplyResources(this.chkAllowIn2, "chkAllowIn2");
-            this.chkAllowIn2.Name = "chkAllowIn2";
-            this.chkAllowIn2.UseVisualStyleBackColor = true;
-            this.chkAllowIn2.CheckedChanged += new System.EventHandler(this.chkAllowIn2_CheckedChanged);
-            // 
             // chkudpEnabled2
             // 
             resources.ApplyResources(this.chkudpEnabled2, "chkudpEnabled2");
@@ -222,21 +225,6 @@
             // 
             resources.ApplyResources(this.txtlocalPort2, "txtlocalPort2");
             this.txtlocalPort2.Name = "txtlocalPort2";
-            // 
-            // cmbprotocol
-            // 
-            this.cmbprotocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cmbprotocol, "cmbprotocol");
-            this.cmbprotocol.FormattingEnabled = true;
-            this.cmbprotocol.Items.AddRange(new object[] {
-            resources.GetString("cmbprotocol.Items"),
-            resources.GetString("cmbprotocol.Items1")});
-            this.cmbprotocol.Name = "cmbprotocol";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // chkudpEnabled
             // 
@@ -531,10 +519,20 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // muxNumBox
+            // cmbprotocol
             // 
-            resources.ApplyResources(this.muxNumBox, "muxNumBox");
-            this.muxNumBox.Name = "muxNumBox";
+            this.cmbprotocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbprotocol, "cmbprotocol");
+            this.cmbprotocol.FormattingEnabled = true;
+            this.cmbprotocol.Items.AddRange(new object[] {
+            resources.GetString("cmbprotocol.Items"),
+            resources.GetString("cmbprotocol.Items1")});
+            this.cmbprotocol.Name = "cmbprotocol";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // OptionSettingForm
             // 
@@ -588,13 +586,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cmbprotocol;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbprotocol2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtlocalPort2;
         private System.Windows.Forms.CheckBox chkudpEnabled2;
-        private System.Windows.Forms.CheckBox chkAllowIn2;
         private System.Windows.Forms.CheckBox chkmuxEnabled;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -635,5 +630,8 @@
         private System.Windows.Forms.Button btnSetDefRountingRule;
         private System.Windows.Forms.Label muxNumLabel;
         private System.Windows.Forms.TextBox muxNumBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbprotocol;
+        private System.Windows.Forms.Label label1;
     }
 }

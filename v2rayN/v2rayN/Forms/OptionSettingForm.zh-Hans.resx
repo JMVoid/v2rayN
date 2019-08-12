@@ -188,7 +188,7 @@
     <value>77, 12</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>本地监听端口</value>
+    <value>本地Socks5端口</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>  Core:基础设置  </value>
@@ -290,5 +290,8 @@
   </data>
   <data name="muxNumLabel.Text" xml:space="preserve">
     <value>Mux个数</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>本地http端口</value>
   </data>
 </root>

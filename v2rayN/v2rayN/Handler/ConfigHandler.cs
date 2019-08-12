@@ -54,12 +54,11 @@ namespace v2rayN.Handler
 
                 config.inbound.Add(inItem);
 
-                //inItem = new InItem();
-                //inItem.protocol = "http";
-                //inItem.localPort = 1081;
+               InItem inItemHttp = new InItem();
+                inItemHttp.protocol = "http";
+                inItemHttp.localPort = 10809;
                 //inItem.udpEnabled = true;
-
-                //config.inbound.Add(inItem);
+                config.inbound.Add(inItemHttp);
             }
             else
             {
