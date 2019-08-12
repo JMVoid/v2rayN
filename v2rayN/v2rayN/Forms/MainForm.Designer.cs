@@ -134,6 +134,7 @@
             // lvServers
             // 
             resources.ApplyResources(this.lvServers, "lvServers");
+            this.lvServers.BackColor = System.Drawing.SystemColors.Window;
             this.lvServers.ContextMenuStrip = this.cmsLv;
             this.lvServers.FullRowSelect = true;
             this.lvServers.GridLines = true;

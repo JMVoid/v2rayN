@@ -76,7 +76,7 @@ namespace v2rayN.Handler
             }
             if (Utils.IsNullOrEmpty(config.routingMode))
             {
-                config.routingMode = "0";
+                config.routingMode = "3";
             }
             if (config.useragent == null)
             {

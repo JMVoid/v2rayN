@@ -233,12 +233,19 @@ namespace v2rayN.Mode
         public string type { get; set; }
     }
 
+    public class dnsServer
+    {
+            public string address { get; set; }
+            
+            public int port { get; set; }
+    }
     public class Dns
     {
         /// <summary>
         /// 
         /// </summary>
-        public List<string> servers { get; set; }
+        //public List<string> servers { get; set; }
+        public List<dnsServer> servers { get; set; }
     }
 
     public class RulesItem

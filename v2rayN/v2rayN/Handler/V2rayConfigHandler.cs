@@ -202,8 +202,8 @@ namespace v2rayN.Handler
                             routingGeo("", "cn", Global.directTag, ref v2rayConfig);
                             break;
                         case "3":
-                            routingGeo("ip", "private", Global.directTag, ref v2rayConfig);
                             routingGeo("", "cn", Global.directTag, ref v2rayConfig);
+                            routingGeo("ip", "private", Global.directTag, ref v2rayConfig);
                             break;
                     }
 
@@ -564,29 +564,43 @@ namespace v2rayN.Handler
         /// <returns></returns>
         private static int dns(Config config, ref V2rayConfig v2rayConfig)
         {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(config.remoteDNS))
-                {
-                    return 0;
-                }
-                List<string> servers = new List<string>();
+            //try
+            //{
+            //    if (string.IsNullOrWhiteSpace(config.remoteDNS))
+            //    {
+            //        return 0;
+            //    }
+            //    List<string> servers = new List<string>();
 
-                string[] arrDNS = config.remoteDNS.Split(',');
-                foreach (string str in arrDNS)
-                {
-                    //if (Utils.IsIP(str))
-                    //{
-                    servers.Add(str);
-                    //}
-                }
-                //servers.Add("localhost");
-                v2rayConfig.dns = new Mode.Dns();
-                v2rayConfig.dns.servers = servers;
+            //    string[] arrDNS = config.remoteDNS.Split(',');
+            //    foreach (string str in arrDNS)
+            //    {
+            //        //if (Utils.IsIP(str))
+            //        //{
+            //        servers.Add(str);
+            //        //}
+            //    }
+            //    //servers.Add("localhost");
+            //    v2rayConfig.dns = new Mode.Dns();
+            //    v2rayConfig.dns.servers = servers;
+            //}
+            //catch
+            //{
+            //}
+
+            try {
+                // defalut overture dns configuration 
+                List<dnsServer> servers = new List<dnsServer>();
+                dnsServer overtureDns = new dnsServer();
+                overtureDns.address = "127.0.0.1";
+                overtureDns.port = 15333;
+                servers.Add(overtureDns);
+               v2rayConfig.dns = new Mode.Dns();
+               v2rayConfig.dns.servers = servers;
             }
-            catch
-            {
+            catch {
             }
+
             return 0;
         }
 

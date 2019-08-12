@@ -57,9 +57,11 @@ namespace v2rayN.Forms
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = true;
 
-                HideForm();
+                //e.Cancel = true;
+                CloseV2ray();
+                Application.Exit();
+                //HideForm();
                 return;
             }
         }
@@ -122,16 +124,19 @@ namespace v2rayN.Forms
             lvServers.Scrollable = true;
             lvServers.MultiSelect = true;
             lvServers.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-
+            lvServers.Font = new System.Drawing.Font("MS Sans Serif", 10, System.Drawing.FontStyle.Regular);
+            lvServers.Padding = new System.Windows.Forms.Padding(5);
+ 
+            
             lvServers.Columns.Add("", 30, HorizontalAlignment.Center);
             lvServers.Columns.Add(UIRes.I18N("LvServiceType"), 80, HorizontalAlignment.Left);
-            lvServers.Columns.Add(UIRes.I18N("LvAlias"), 100, HorizontalAlignment.Left);
-            lvServers.Columns.Add(UIRes.I18N("LvAddress"), 120, HorizontalAlignment.Left);
+            lvServers.Columns.Add(UIRes.I18N("LvAlias"), 150, HorizontalAlignment.Left);
+            lvServers.Columns.Add(UIRes.I18N("LvAddress"), 200, HorizontalAlignment.Left);
             lvServers.Columns.Add(UIRes.I18N("LvPort"), 50, HorizontalAlignment.Left);
-            lvServers.Columns.Add(UIRes.I18N("LvEncryptionMethod"), 90, HorizontalAlignment.Left);
-            lvServers.Columns.Add(UIRes.I18N("LvTransportProtocol"), 70, HorizontalAlignment.Left);
-            lvServers.Columns.Add(UIRes.I18N("LvSubscription"), 50, HorizontalAlignment.Left);
-            lvServers.Columns.Add(UIRes.I18N("LvTestResults"), 100, HorizontalAlignment.Left);
+            //lvServers.Columns.Add(UIRes.I18N("LvEncryptionMethod"), 90, HorizontalAlignment.Left);
+            //lvServers.Columns.Add(UIRes.I18N("LvTransportProtocol"), 70, HorizontalAlignment.Left);
+            lvServers.Columns.Add(UIRes.I18N("LvSubscription"), 100, HorizontalAlignment.Left);
+            lvServers.Columns.Add(UIRes.I18N("LvTestResults"), 60, HorizontalAlignment.Left);
 
         }
 
@@ -160,12 +165,14 @@ namespace v2rayN.Forms
                     item.port.ToString(),
                     //item.id,
                     //item.alterId.ToString(),
-                    item.security,
-                    item.network,
+                    //item.security,
+                    //item.network,
                     item.getSubRemarks(config),
                     item.testResult
                 });
+          
                 lvServers.Items.Add(lvItem);
+
             }
 
             //if (lvServers.Items.Count > 0)
