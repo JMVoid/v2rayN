@@ -77,7 +77,8 @@ namespace v2rayN.Mode
         /// <summary>
         /// 启用Http代理
         /// </summary>
-        public bool sysAgentEnabled { get; set; }
+        //  deprecate the privoxy.exe in application
+            //public bool sysAgentEnabled { get; set; }
 
         /// <summary>
         /// 监听状态 0-不改变 1-全局 2-PAC

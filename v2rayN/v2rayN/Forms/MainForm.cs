@@ -257,8 +257,8 @@ namespace v2rayN.Forms
             }
             v2rayHandler.LoadV2ray(config);
             Global.reloadV2ray = false;
-
-            ChangeSysAgent(config.sysAgentEnabled);
+            ChangePACButtonStatus(config.listenerType);
+            //ChangeSysAgent(config.sysAgentEnabled);
         }
 
         /// <summary>
@@ -268,7 +268,8 @@ namespace v2rayN.Forms
         {
             ConfigHandler.ToJsonFile(config);
 
-            ChangeSysAgent(false);
+            ChangePACButtonStatus(0);
+            //ChangeSysAgent(false);
 
             v2rayHandler.V2rayStop();
         }
@@ -423,19 +424,19 @@ namespace v2rayN.Forms
             bgwPing.RunWorkerAsync();
         }
 
-        private void menuSpeedServer_Click(object sender, EventArgs e)
-        {
-            if (!config.sysAgentEnabled || config.listenerType != 1)
-            {
-                UI.Show(UIRes.I18N("NeedHttpGlobalProxy"));
-                return;
-            }
+        //private void menuSpeedServer_Click(object sender, EventArgs e)
+        //{
+        //    if (!config.sysAgentEnabled || config.listenerType != 1)
+        //    {
+        //        UI.Show(UIRes.I18N("NeedHttpGlobalProxy"));
+        //        return;
+        //    }
 
-            UI.Show(UIRes.I18N("SpeedServerTips"));
+        //    UI.Show(UIRes.I18N("SpeedServerTips"));
 
-            GetLvSelectedIndex();
-            ServerSpeedTest();
-        }
+        //    GetLvSelectedIndex();
+        //    ServerSpeedTest();
+        //}
 
         private void menuExport2ClientConfig_Click(object sender, EventArgs e)
         {
@@ -1017,12 +1018,12 @@ namespace v2rayN.Forms
             Utils.SetClipboardData(HttpProxyHandle.GetPacUrl());
         }
 
-        private void menuSysAgentEnabled_Click(object sender, EventArgs e)
-        {
-            bool isChecked = !config.sysAgentEnabled;
-            config.sysAgentEnabled = isChecked;
-            ChangeSysAgent(isChecked);
-        }
+        //private void menuSysAgentEnabled_Click(object sender, EventArgs e)
+        //{
+        //    bool isChecked = !config.sysAgentEnabled;
+        //    config.sysAgentEnabled = isChecked;
+        //    ChangeSysAgent(isChecked);
+        //}
 
         private void menuGlobal_Click(object sender, EventArgs e)
         {
@@ -1050,33 +1051,38 @@ namespace v2rayN.Forms
 
         private void ChangePACButtonStatus(int type)
         {
-            if (HttpProxyHandle.Update(config, false))
+            bool forceDisable = true;
+            if (type != 0) {
+                forceDisable = false;
+            } 
+
+            if (HttpProxyHandle.Update(config, forceDisable))
             {
                 switch (type)
                 {
                     case 1:
                         menuGlobal.Checked = true;
                         menuGlobalPAC.Checked = false;
-                        menuKeep.Checked = false;
-                        menuKeepPAC.Checked = false;
+                        //menuKeep.Checked = false;
+                        //menuKeepPAC.Checked = false;
                         break;
                     case 2:
                         menuGlobal.Checked = false;
                         menuGlobalPAC.Checked = true;
-                        menuKeep.Checked = false;
-                        menuKeepPAC.Checked = false;
+                        //menuKeep.Checked = false;
+                        //menuKeepPAC.Checked = false;
                         break;
                     case 3:
                         menuGlobal.Checked = false;
                         menuGlobalPAC.Checked = false;
-                        menuKeep.Checked = true;
-                        menuKeepPAC.Checked = false;
+                        //menuKeep.Checked = true;
+                        //menuKeepPAC.Checked = false;
                         break;
                     case 4:
                         menuGlobal.Checked = false;
                         menuGlobalPAC.Checked = false;
-                        menuKeep.Checked = false;
-                        menuKeepPAC.Checked = true;
+                        //menuKeep.Checked = false;
+                        //menuKeepPAC.Checked = true;
                         break;
                 }
             }
@@ -1087,24 +1093,24 @@ namespace v2rayN.Forms
         /// 改变系统代理
         /// </summary>
         /// <param name="isChecked"></param>
-        private void ChangeSysAgent(bool isChecked)
-        {
-            if (isChecked)
-            {
-                if (HttpProxyHandle.RestartHttpAgent(config, true))
-                {
-                    ChangePACButtonStatus(config.listenerType);
-                }
-            }
-            else
-            {
-                HttpProxyHandle.Update(config, true);
-                HttpProxyHandle.CloseHttpAgent(config);
-            }
+        //private void ChangeSysAgent(bool isChecked)
+        //{
+        //    if (isChecked)
+        //    {
+        //        if (HttpProxyHandle.RestartHttpAgent(config, true))
+        //        {
+        //            ChangePACButtonStatus(config.listenerType);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        HttpProxyHandle.Update(config, true);
+        //        HttpProxyHandle.CloseHttpAgent(config);
+        //    }
 
-            menuSysAgentEnabled.Checked =
-            menuSysAgentMode.Enabled = isChecked;
-        }
+        //    menuSysAgentEnabled.Checked =
+        //    menuSysAgentMode.Enabled = isChecked;
+        //}
         #endregion
 
 

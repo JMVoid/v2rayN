@@ -45,6 +45,8 @@
             this.cmbprotocol2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtlocalPort2 = new System.Windows.Forms.TextBox();
+            this.cmbprotocol = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.chkudpEnabled = new System.Windows.Forms.CheckBox();
             this.chklogEnabled = new System.Windows.Forms.CheckBox();
             this.cmbloglevel = new System.Windows.Forms.ComboBox();
@@ -89,8 +91,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbprotocol = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -225,6 +225,21 @@
             // 
             resources.ApplyResources(this.txtlocalPort2, "txtlocalPort2");
             this.txtlocalPort2.Name = "txtlocalPort2";
+            // 
+            // cmbprotocol
+            // 
+            this.cmbprotocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbprotocol, "cmbprotocol");
+            this.cmbprotocol.FormattingEnabled = true;
+            this.cmbprotocol.Items.AddRange(new object[] {
+            resources.GetString("cmbprotocol.Items"),
+            resources.GetString("cmbprotocol.Items1")});
+            this.cmbprotocol.Name = "cmbprotocol";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // chkudpEnabled
             // 
@@ -518,21 +533,6 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // cmbprotocol
-            // 
-            this.cmbprotocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cmbprotocol, "cmbprotocol");
-            this.cmbprotocol.FormattingEnabled = true;
-            this.cmbprotocol.Items.AddRange(new object[] {
-            resources.GetString("cmbprotocol.Items"),
-            resources.GetString("cmbprotocol.Items1")});
-            this.cmbprotocol.Name = "cmbprotocol";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // OptionSettingForm
             // 

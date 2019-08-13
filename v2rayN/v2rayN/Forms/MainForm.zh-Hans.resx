@@ -217,12 +217,6 @@
   <data name="menuPingServer.Text" xml:space="preserve">
     <value>测试服务器延迟(多选)</value>
   </data>
-  <data name="menuSpeedServer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 22</value>
-  </data>
-  <data name="menuSpeedServer.Text" xml:space="preserve">
-    <value>测试服务器速度(多选)</value>
-  </data>
   <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 6</value>
   </data>
@@ -279,35 +273,17 @@
         ZW0uRHJhd2luZy5HcmFwaGljc1VuaXQBAAAAB3ZhbHVlX18ACAMAAAADAAAACw==
 </value>
   </data>
-  <data name="menuSysAgentEnabled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
-  </data>
-  <data name="menuSysAgentEnabled.Text" xml:space="preserve">
-    <value>启用Http代理</value>
-  </data>
   <data name="menuGlobal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 22</value>
+    <value>229, 22</value>
   </data>
   <data name="menuGlobal.Text" xml:space="preserve">
-    <value>开启Http代理,并自动配置代理服务器(全局模式)</value>
+    <value>自动配置Http代理(全局模式)</value>
   </data>
   <data name="menuGlobalPAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 22</value>
+    <value>229, 22</value>
   </data>
   <data name="menuGlobalPAC.Text" xml:space="preserve">
-    <value>开启PAC,并自动配置PAC(PAC模式)</value>
-  </data>
-  <data name="menuKeep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 22</value>
-  </data>
-  <data name="menuKeep.Text" xml:space="preserve">
-    <value>仅开启Http代理,不自动配置代理服务器(直连模式)</value>
-  </data>
-  <data name="menuKeepPAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 22</value>
-  </data>
-  <data name="menuKeepPAC.Text" xml:space="preserve">
-    <value>仅开启PAC,不自动配置PAC</value>
+    <value>自动配置PAC(PAC模式)</value>
   </data>
   <data name="menuSysAgentMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
@@ -349,7 +325,7 @@
     <value>退出</value>
   </data>
   <data name="cmsMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 186</value>
+    <value>196, 142</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>服务器列表</value>

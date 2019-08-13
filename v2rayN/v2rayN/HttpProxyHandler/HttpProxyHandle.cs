@@ -38,7 +38,9 @@ namespace v2rayN.HttpProxyHandler
             {
                 if (type != 0)
                 {
-                    var port = Global.sysAgentPort;
+                    //var port = Global.sysAgentPort;
+                    var port = config.GetLocalPort("http");
+                    
                     if (port <= 0)
                     {
                         return false;

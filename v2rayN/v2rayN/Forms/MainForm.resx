@@ -1013,7 +1013,7 @@
     <value>notifyMain</value>
   </data>
   <data name="menuGlobal.Text" xml:space="preserve">
-    <value>Open Http proxy and automatically configure proxy server (global mode)</value>
+    <value>automatically configure Http proxy (global mode)</value>
   </data>
   <data name="&gt;&gt;tsbOptionSetting.Name" xml:space="preserve">
     <value>tsbOptionSetting</value>
@@ -1031,7 +1031,7 @@
     <value>Magenta</value>
   </data>
   <data name="menuGlobalPAC.Text" xml:space="preserve">
-    <value>Open PAC and automatically configure PAC (PAC mode)</value>
+    <value>automatically configure PAC (PAC mode)</value>
   </data>
   <data name="menuAddVmessServer.Size" type="System.Drawing.Size, System.Drawing">
     <value>447, 22</value>
@@ -1196,9 +1196,6 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="notifyMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>65</value>
   </metadata>
@@ -1207,6 +1204,9 @@
   </metadata>
   <metadata name="bgwScan.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>498, 17</value>
+  </metadata>
+  <metadata name="notifyMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="tsMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>409, 17</value>

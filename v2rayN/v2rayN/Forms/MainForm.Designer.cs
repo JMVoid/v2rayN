@@ -51,7 +51,6 @@
             this.menuSelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.menuPingServer = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSpeedServer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.menuExport2ClientConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2ServerConfig = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,12 +60,9 @@
             this.qrCodeControl = new v2rayN.Forms.QRCodeControl();
             this.notifyMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuSysAgentEnabled = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSysAgentMode = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGlobal = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGlobalPAC = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuKeep = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuKeepPAC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuServers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddServers2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuScanScreen2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -172,7 +168,6 @@
             this.menuSelectAll,
             this.toolStripSeparator9,
             this.menuPingServer,
-            this.menuSpeedServer,
             this.toolStripSeparator6,
             this.menuExport2ClientConfig,
             this.menuExport2ServerConfig,
@@ -286,12 +281,6 @@
             this.menuPingServer.Name = "menuPingServer";
             this.menuPingServer.Click += new System.EventHandler(this.menuPingServer_Click);
             // 
-            // menuSpeedServer
-            // 
-            resources.ApplyResources(this.menuSpeedServer, "menuSpeedServer");
-            this.menuSpeedServer.Name = "menuSpeedServer";
-            this.menuSpeedServer.Click += new System.EventHandler(this.menuSpeedServer_Click);
-            // 
             // toolStripSeparator6
             // 
             resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
@@ -344,7 +333,6 @@
             resources.ApplyResources(this.cmsMain, "cmsMain");
             this.cmsMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuSysAgentEnabled,
             this.menuSysAgentMode,
             this.menuServers,
             this.menuAddServers2,
@@ -357,20 +345,12 @@
             this.cmsMain.ShowCheckMargin = true;
             this.cmsMain.ShowImageMargin = false;
             // 
-            // menuSysAgentEnabled
-            // 
-            resources.ApplyResources(this.menuSysAgentEnabled, "menuSysAgentEnabled");
-            this.menuSysAgentEnabled.Name = "menuSysAgentEnabled";
-            this.menuSysAgentEnabled.Click += new System.EventHandler(this.menuSysAgentEnabled_Click);
-            // 
             // menuSysAgentMode
             // 
             resources.ApplyResources(this.menuSysAgentMode, "menuSysAgentMode");
             this.menuSysAgentMode.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuGlobal,
-            this.menuGlobalPAC,
-            this.menuKeep,
-            this.menuKeepPAC});
+            this.menuGlobalPAC});
             this.menuSysAgentMode.Name = "menuSysAgentMode";
             // 
             // menuGlobal
@@ -384,18 +364,6 @@
             resources.ApplyResources(this.menuGlobalPAC, "menuGlobalPAC");
             this.menuGlobalPAC.Name = "menuGlobalPAC";
             this.menuGlobalPAC.Click += new System.EventHandler(this.menuGlobalPAC_Click);
-            // 
-            // menuKeep
-            // 
-            resources.ApplyResources(this.menuKeep, "menuKeep");
-            this.menuKeep.Name = "menuKeep";
-            this.menuKeep.Click += new System.EventHandler(this.menuKeep_Click);
-            // 
-            // menuKeepPAC
-            // 
-            resources.ApplyResources(this.menuKeepPAC, "menuKeepPAC");
-            this.menuKeepPAC.Name = "menuKeepPAC";
-            this.menuKeepPAC.Click += new System.EventHandler(this.menuKeepPAC_Click);
             // 
             // menuServers
             // 
@@ -709,8 +677,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuSysAgentMode;
         private System.Windows.Forms.ToolStripMenuItem menuGlobal;
         private System.Windows.Forms.ToolStripMenuItem menuGlobalPAC;
-        private System.Windows.Forms.ToolStripMenuItem menuKeep;
-        private System.Windows.Forms.ToolStripMenuItem menuSysAgentEnabled;
         private System.Windows.Forms.ToolStripMenuItem menuCopyPACUrl;
         private System.Windows.Forms.ToolStripMenuItem menuAddCustomServer;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -724,7 +690,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsbCheckUpdatePACList;
         private System.Windows.Forms.ToolStripMenuItem menuAddServers;
         private System.Windows.Forms.ToolStripMenuItem menuExport2ShareUrl;
-        private System.Windows.Forms.ToolStripMenuItem menuSpeedServer;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripDropDownButton tsbHelp;
         private System.Windows.Forms.ToolStripMenuItem tsbAbout;
@@ -737,7 +702,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsbSubSetting;
         private System.Windows.Forms.ToolStripMenuItem tsbSubUpdate;
         private System.Windows.Forms.ToolStripMenuItem tsbCheckClearPACList;
-        private System.Windows.Forms.ToolStripMenuItem menuKeepPAC;
         private System.Windows.Forms.ToolStripMenuItem menuSelectAll;
         private System.Windows.Forms.ToolStripMenuItem menuExport2SubContent;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
