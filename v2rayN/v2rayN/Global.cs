@@ -59,6 +59,23 @@ namespace v2rayN
         /// 空白的pac文件
         /// </summary>
         public const string BlankPacFileName = "v2rayN.Sample.BlankPac.txt";
+        ///
+        /// overtue configure filename
+        /// 
+        public const string overtureConfigFileName = "otConfig.json";
+        ///
+        /// overture configure sample file
+        /// 
+        public const string overtureSampleConfig = "v2rayN.Sample.OvertureSampleConfig.txt";
+        /// 
+        /// overture primary ip list file, in this time is china ip list
+        ///
+        public const string overturePrimaryIPListFile = "china_ip_list.txt";
+        ///
+        /// overture alternative ip list file , in this time, here is empty ip list
+        ///
+        public const string overtureAlernativeIPLIstFile = "ip_network_alternative_sample";
+
 
 
         /// <summary>
@@ -163,6 +180,7 @@ namespace v2rayN
         public static int pacPort { get; set; }
 
         #endregion
+
 
 
 

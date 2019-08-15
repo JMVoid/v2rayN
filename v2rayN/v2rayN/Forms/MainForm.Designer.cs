@@ -56,11 +56,12 @@
             this.menuExport2ServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2ShareUrl = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2SubContent = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
             this.qrCodeControl = new v2rayN.Forms.QRCodeControl();
+            this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
             this.notifyMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuSysAgentMode = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuManualMode = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGlobal = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGlobalPAC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuServers = new System.Windows.Forms.ToolStripMenuItem();
@@ -310,17 +311,17 @@
             this.menuExport2SubContent.Name = "menuExport2SubContent";
             this.menuExport2SubContent.Click += new System.EventHandler(this.menuExport2SubContent_Click);
             // 
+            // qrCodeControl
+            // 
+            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
+            this.qrCodeControl.Name = "qrCodeControl";
+            // 
             // tsbServer
             // 
             resources.ApplyResources(this.tsbServer, "tsbServer");
             this.tsbServer.DropDown = this.cmsLv;
             this.tsbServer.Image = global::v2rayN.Properties.Resources.server;
             this.tsbServer.Name = "tsbServer";
-            // 
-            // qrCodeControl
-            // 
-            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
-            this.qrCodeControl.Name = "qrCodeControl";
             // 
             // notifyMain
             // 
@@ -349,9 +350,16 @@
             // 
             resources.ApplyResources(this.menuSysAgentMode, "menuSysAgentMode");
             this.menuSysAgentMode.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuManualMode,
             this.menuGlobal,
             this.menuGlobalPAC});
             this.menuSysAgentMode.Name = "menuSysAgentMode";
+            // 
+            // menuManualMode
+            // 
+            resources.ApplyResources(this.menuManualMode, "menuManualMode");
+            this.menuManualMode.Name = "menuManualMode";
+            this.menuManualMode.Click += new System.EventHandler(this.MenuManualMode_Click);
             // 
             // menuGlobal
             // 
@@ -709,6 +717,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsbLanguageZhHans;
         private System.Windows.Forms.ToolStripButton tsbPromotion;
         private System.Windows.Forms.ToolStripMenuItem menuAddSocksServer;
+        private System.Windows.Forms.ToolStripMenuItem menuManualMode;
     }
 }
 

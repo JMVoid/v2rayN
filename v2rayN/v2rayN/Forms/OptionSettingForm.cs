@@ -60,8 +60,8 @@ namespace v2rayN.Forms
                 //chkAllowIn2State();
             }
 
-            //remoteDNS
-            txtremoteDNS.Text = config.remoteDNS;
+            //directDNS
+            txtremoteDNS.Text = config.directDNS;
         }
 
         /// <summary>
@@ -221,8 +221,8 @@ namespace v2rayN.Forms
             //Mux
             config.muxEnabled = muxEnabled;
 
-            //remoteDNS
-            config.remoteDNS = txtremoteDNS.Text.Trim();
+            //directDNS
+            config.directDNS = txtremoteDNS.Text.Trim();
 
             return 0;
         }

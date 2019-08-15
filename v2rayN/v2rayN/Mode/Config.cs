@@ -98,7 +98,9 @@ namespace v2rayN.Mode
         /// <summary>
         /// 自定义远程DNS
         /// </summary>
-        public string remoteDNS { get; set; }
+        public string directDNS { get; set; }
+        public string proxyDNS { get; set; }
+        
         /// <summary>
         /// 订阅
         /// </summary>

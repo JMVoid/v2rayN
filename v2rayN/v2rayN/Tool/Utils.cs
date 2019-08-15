@@ -321,9 +321,23 @@ namespace v2rayN
 
             //模式字符串
             string pattern = @"^((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)$";
-
+            bool b = IsMatch(ip, pattern);
             //验证
             return IsMatch(ip, pattern);
+        }
+        ///<summary>
+        /// check it is ip:port  
+        ///</summary>
+
+        public static bool IsIPort(string ip_port) {
+            string[] arr = ip_port.Split(':');
+            if (arr.Length != 2) {
+                return false;
+            }
+            if (IsIP(arr[0]) && IsNumberic(arr[1])) {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>

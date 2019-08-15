@@ -40,6 +40,13 @@ namespace v2rayN.Handler
                 config.muxNumber = 8;
                 ////默认监听端口
                 //config.pacPort = 8888;
+                // init listenerType  = 0
+                config.listenerType = 0;
+                // init directDNS as 
+                config.directDNS = "119.29.29.29:53,114.114.114.114:53";
+                // init proxyDNS 
+                config.proxyDNS = "8.8.8.8:53,1.1.1.1:53";
+
             }
 
             //本地监听

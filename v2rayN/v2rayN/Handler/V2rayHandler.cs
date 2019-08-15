@@ -20,6 +20,8 @@ namespace v2rayN.Handler
     class V2rayHandler
     {
         private static string v2rayConfigRes = Global.v2rayConfigFileName;
+        private static string overtureConfigRes = Global.overtureConfigFileName;
+
         private List<string> lstV2ray;
         public event ProcessDelegate ProcessEvent;
         private int processId = 0;
@@ -41,7 +43,11 @@ namespace v2rayN.Handler
             {
                 string msg = string.Empty;
                 string fileName = Utils.GetPath(v2rayConfigRes);
-                if (V2rayConfigHandler.GenerateClientConfig(config, fileName, false, out msg) != 0)
+                string overtureMsg = string.Empty;
+                string otFileName = Utils.GetPath(overtureConfigRes);
+
+                if (V2rayConfigHandler.GenerateClientConfig(config, fileName, false, out msg) != 0 
+                    || OvertureHandler.GenerateOvertureConfig(config, otFileName, out overtureMsg) != 0)
                 {
                     ShowMsg(false, msg);
                 }

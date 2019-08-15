@@ -1060,30 +1060,37 @@ namespace v2rayN.Forms
             {
                 switch (type)
                 {
+                    case 0:
+                        menuManualMode.Checked = true;
+                        menuGlobal.Checked = false;
+                        menuGlobalPAC.Checked = false;
+                        break;
                     case 1:
+                        menuManualMode.Checked = false;
                         menuGlobal.Checked = true;
                         menuGlobalPAC.Checked = false;
                         //menuKeep.Checked = false;
                         //menuKeepPAC.Checked = false;
                         break;
                     case 2:
+                        menuManualMode.Checked = false;
                         menuGlobal.Checked = false;
                         menuGlobalPAC.Checked = true;
                         //menuKeep.Checked = false;
                         //menuKeepPAC.Checked = false;
                         break;
-                    case 3:
-                        menuGlobal.Checked = false;
-                        menuGlobalPAC.Checked = false;
+                    //case 3:
+                    //    menuGlobal.Checked = false;
+                    //    menuGlobalPAC.Checked = false;
                         //menuKeep.Checked = true;
                         //menuKeepPAC.Checked = false;
-                        break;
-                    case 4:
-                        menuGlobal.Checked = false;
-                        menuGlobalPAC.Checked = false;
+                        //break;
+                    //case 4:
+                    //    menuGlobal.Checked = false;
+                    //    menuGlobalPAC.Checked = false;
                         //menuKeep.Checked = false;
                         //menuKeepPAC.Checked = true;
-                        break;
+                        //break;
                 }
             }
 
@@ -1379,5 +1386,10 @@ namespace v2rayN.Forms
 
         #endregion
 
+        private void MenuManualMode_Click(object sender, EventArgs e)
+        {
+            config.listenerType = 0;
+            ChangePACButtonStatus(config.listenerType);
+        }
     }
 }

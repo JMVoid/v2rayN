@@ -142,6 +142,7 @@
     <Compile Include="Forms\SubSettingControl.Designer.cs">
       <DependentUpon>SubSettingControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handler\OvertureHandler.cs" />
     <Compile Include="Handler\V2rayUpdateHandle.cs" />
     <Compile Include="HttpProxyHandler\HttpWebServer.cs" />
     <Compile Include="HttpProxyHandler\PACFileWatcherHandle.cs" />
@@ -154,6 +155,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Mode\EMove.cs" />
+    <Compile Include="Mode\OvertureConfig.cs" />
     <Compile Include="Mode\SysproxyConfig.cs" />
     <Compile Include="Mode\EConfigType.cs" />
     <Compile Include="Resx\ResUI.zh-Hans.Designer.cs">
@@ -365,6 +367,7 @@
     <None Include="Resources\minimize.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Sample\OvertureSampleConfig.txt" />
     <None Include="Resources\promotion.png" />
     <EmbeddedResource Include="Sample\BlankPac.txt" />
     <None Include="Resources\sub.png" />

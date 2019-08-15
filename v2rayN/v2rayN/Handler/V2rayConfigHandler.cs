@@ -568,7 +568,7 @@ namespace v2rayN.Handler
         }
 
         /// <summary>
-        /// remoteDNS
+        /// directDNS
         /// </summary>
         /// <param name="config"></param>
         /// <param name="v2rayConfig"></param>
@@ -577,13 +577,13 @@ namespace v2rayN.Handler
         {
             //try
             //{
-            //    if (string.IsNullOrWhiteSpace(config.remoteDNS))
+            //    if (string.IsNullOrWhiteSpace(config.directDNS))
             //    {
             //        return 0;
             //    }
             //    List<string> servers = new List<string>();
 
-            //    string[] arrDNS = config.remoteDNS.Split(',');
+            //    string[] arrDNS = config.directDNS.Split(',');
             //    foreach (string str in arrDNS)
             //    {
             //        //if (Utils.IsIP(str))

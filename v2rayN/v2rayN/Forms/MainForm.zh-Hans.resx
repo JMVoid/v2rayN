@@ -251,7 +251,7 @@
     <value>  服务器  </value>
   </data>
   <data name="cmsLv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 468</value>
+    <value>253, 446</value>
   </data>
   <data name="lvServers.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -273,17 +273,23 @@
         ZW0uRHJhd2luZy5HcmFwaGljc1VuaXQBAAAAB3ZhbHVlX18ACAMAAAADAAAACw==
 </value>
   </data>
+  <data name="menuManualMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 22</value>
+  </data>
+  <data name="menuManualMode.Text" xml:space="preserve">
+    <value>手动模式</value>
+  </data>
   <data name="menuGlobal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
+    <value>205, 22</value>
   </data>
   <data name="menuGlobal.Text" xml:space="preserve">
-    <value>自动配置Http代理(全局模式)</value>
+    <value>系统Http代理(全局模式)</value>
   </data>
   <data name="menuGlobalPAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
+    <value>205, 22</value>
   </data>
   <data name="menuGlobalPAC.Text" xml:space="preserve">
-    <value>自动配置PAC(PAC模式)</value>
+    <value>系统PAC(PAC模式)</value>
   </data>
   <data name="menuSysAgentMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
@@ -325,7 +331,7 @@
     <value>退出</value>
   </data>
   <data name="cmsMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 142</value>
+    <value>196, 164</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>服务器列表</value>
